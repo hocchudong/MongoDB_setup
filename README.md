@@ -18,7 +18,7 @@ $ sudo apt-get install -y mongodb-org=2.6.1 mongodb-org-server=2.6.1 mongodb-org
 ```
 ## 3. Làm việc với MongoDB
 
-###3.1 Chạy dịch vụ MongoDB
+####3.1 Chạy dịch vụ MongoDB
 
 Trước khi chúng ta có thể tạo và lưu tài liệu trong cơ sở dữ liệu của mình, chúng ta phải chạy MongoDB. Sẽ không có bất cứ tài liệu nào được lưu nếu dịch vụ chưa được chạy.Chỉ một câu lệnh đơn giản để chạy mongodb:
 
@@ -26,7 +26,7 @@ Trước khi chúng ta có thể tạo và lưu tài liệu trong cơ sở dữ 
 $ sudo service mongod start
 ```
 
-###3.2 Kết nối đến MongoDB
+####3.2 Kết nối đến MongoDB
 
 ```sh
 $ mongo 
@@ -34,22 +34,22 @@ $ mongo
 
 ## 4. Những lệnh phổ biến
 
-### 4.1 Liệt kê tất cả cơ sở dữ liệu
+#### 4.1 Liệt kê tất cả cơ sở dữ liệu
 ```sh
 $ show dbs;
 ```
-### 4.2 Chọn một cơ sở dữ liệu
+#### 4.2 Chọn một cơ sở dữ liệu
 ```sh
 $ use db_name
 ```
-### 4.3 Create
+#### 4.3 Create
 ```sh
 // Lưu một user
 $ db.users.save({ name: 'Chris' });
 // Lưu nhiều user 
 $ db.users.save({ name: 'Chris'}, { name: 'Holly' });
 ```
-### 4.4 Read
+#### 4.4 Read
 ```sh
 // show all users
 $ db.users.find();
@@ -57,11 +57,11 @@ $ db.users.find();
 // Tìm một user xác định 
 $ db.users.find({ name: 'Holly' });
 ```
-### 4.5 Update
+#### 4.5 Update
 ```sh
 db.users.update({ name: 'Holly' }, { name: 'Holly Lloyd' });
 ```
-### 4.6 Delete
+#### 4.6 Delete
 ```sh
 // xóa tất cả 
 db.users.remove({});
@@ -69,26 +69,15 @@ db.users.remove({});
 
 db.users.remove({ name: 'Holly' });
 ```
+#### 4.7 Xác thực user
+ Xác thực user ta chỉnh sửa file cấu hình  /etc/mongodb.conf sửa auth=False thành auth=True. Sau đó resart lại dịch vụ
+ Trên mỗi database ta sẽ tạo user với mật khẩu. Để sử dụng được database cần xác thực tài khoản
 
-
-Celometer sẽ giám sát từng máy ảo trong OpenStack và lấy mẫu về hệ thống theo định kỳ trong một khoảng thời gian được khai báo trong cấu hình. Đây là dịch vụ phục vụ lưu log và tính cước cho hệ thống vì vậy cần sao lưu dữ liệu dự phòng. Dữ liệu Ceilometer thu thập về sẽ lưu vào cơ sở dữ liệu là MongoDb. 
-Tạo bản sao lưu dữ liệu:
-```sh
-mongodump --host mongodb.example.net --port 27017
-```
+ <img src=http://i.imgur.com/HPAJ50L.png width="80%" height="80%" border="1">
  
- <img src=http://i.imgur.com/pvu8kCG.png width="80%" height="80%" border="1">
- 
-Trong câu lệnh mongodb.example.net là máy server chứa database MongoDB. Bản sao dữ liệu sẽ được sinh ngay tại thư mục hiện tại, để lưu bản sao về thư mục định nghĩa trước ta thêm tham số –out như sau
-```sh
-mongodump --host mongodb.example.net --port 27017 –out /data/backup
-```
--Khôi phục dữ liệu
+Xác thực sử dụng database
 
-
-Để khôi phục dữ liệu vừa backup ở trên ta dùng mongorestore
-```sh
-mongorestore –port <port number><path to
+<img src=http://i.imgur.com/HPAJ50L.png width="80%" height="80%" border="1">
 
 ## Tham khảo
 
