@@ -26,6 +26,8 @@
 
 - [4.6 Delete](#delete)
 
+[V. Xác thực](#xacthuc)
+
 
 
 <a name="Gioithieu"></a>
@@ -107,16 +109,32 @@ db.users.remove({});
 
 db.users.remove({ name: 'Holly' });
 ```
-<a name="kn"></a>
-#### 4.7 Xác thực user
- Xác thực user ta chỉnh sửa file cấu hình  /etc/mongodb.conf sửa auth=False thành auth=True. Sau đó resart lại dịch vụ
+<a name="xacthuc"></a>
+## 5. Xác thực
+Mặc định khi cài mongodb thì có 2 lưu ý sau:
+
+- 1.Người dùng máy local có quyền truy cập và sử dụng database không cần xác thực user
+- 2.Máy từ xa không có quyền truy cập vào database
+
+Trương hợp 1 ta cần xác thực khi người dùng máy local truy cập vào database, ta chỉnh sửa file cấu hình  /etc/mongodb.conf sửa auth=False thành auth=True. Sau đó resart lại dịch vụ
  Trên mỗi database ta sẽ tạo user với mật khẩu. Để sử dụng được database cần xác thực tài khoản
 
  <img src=http://i.imgur.com/HPAJ50L.png width="80%" height="80%" border="1">
  
-Xác thực sử dụng database
+Xác thực sử dụng tài khoản vừa tạo
 
 <img src=http://i.imgur.com/XQFHtDr.png width="100%" height="100%" border="1">
+
+Trường hợp 2: để máy từ xa có thể truy cập vào database ta chỉnh sửa file cấu hình /etc/mongodb.conf
+```sh
+bind_ip=127.0.0.1
+```
+Đổi ip 127.0.0.1 thành ip của máy truy cập từ xa
+
+```sh
+bind_ip= ip_may_tuxa
+```
+
 <a name="kn"></a>
 ## Tham khảo
 
