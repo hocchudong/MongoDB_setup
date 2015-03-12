@@ -116,7 +116,7 @@ Mặc định khi cài mongodb thì có 2 lưu ý sau:
 - 1.Người dùng máy local có quyền truy cập và sử dụng database không cần xác thực user
 - 2.Máy từ xa không có quyền truy cập vào database
 
-Trương hợp 1 ta cần xác thực khi người dùng máy local truy cập vào database, ta chỉnh sửa file cấu hình  /etc/mongodb.conf sửa auth=False thành auth=True. Sau đó resart lại dịch vụ
+Trường hợp 1 ta cần xác thực khi người dùng máy local truy cập vào database, ta chỉnh sửa file cấu hình  /etc/mongodb.conf sửa auth=False thành auth=True. Sau đó resart lại dịch vụ
  Trên mỗi database ta sẽ tạo user với mật khẩu. Để sử dụng được database cần xác thực tài khoản
 
  <img src=http://i.imgur.com/HPAJ50L.png width="80%" height="80%" border="1">
