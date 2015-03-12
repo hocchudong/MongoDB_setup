@@ -1,4 +1,4 @@
-# MongoDB_setup
+# MongoDB cơ bản
 ## 1. Giới thiệu
 Đây là một cơ sở dữ liệu NoSQL thuộc loại cơ sở dữ liệu hướng văn bản mã nguồn mở, có hiệu năng, tính sẵn có và tính mở rộng cao được cung cấp và hổ trợ bởi 10gen.  MongoDB lưu trữ dữ liệu dạng BSON. Không giống như các cơ sở dữ liệu quan hệ lưu dữ cấu trúc dữ liệu theo các bảng, MongoDB lưu trữ cấu trúc dữ liệu thành văn bản dựa JSON với mô hình động (gọi là BSON) khiến cho việc tích hợp dữ liệu cho các ứng dụng trở nên dễ dàng và nhanh hơn.
 
@@ -77,7 +77,7 @@ db.users.remove({ name: 'Holly' });
  
 Xác thực sử dụng database
 
-<img src=http://i.imgur.com/HPAJ50L.png width="80%" height="80%" border="1">
+<img src=http://i.imgur.com/XQFHtDr.png width="80%" height="80%" border="1">
 
 ## Tham khảo
 
