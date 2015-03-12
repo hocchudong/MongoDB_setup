@@ -14,17 +14,17 @@
 
 [IV. Những lệnh phổ biến](#lenhphobien)
 
-[4.1 Liệt kê tất cả cơ sở dữ](#lietkecsdl)
+- [4.1 Liệt kê tất cả cơ sở dữ](#lietkecsdl)
 
-[4.2 Chọn một cơ sở dữ liệu](#choncsdl)
+- [4.2 Chọn một cơ sở dữ liệu](#choncsdl)
 
-[4.3 Create](#create)
+- [4.3 Create](#create)
 
-[4.4 Read](#read)
+- [4.4 Read](#read)
 
-[4.5 Update](#update)
+- [4.5 Update](#update)
 
-[4.6 Delete](#delete)
+- [4.6 Delete](#delete)
 
 
 
