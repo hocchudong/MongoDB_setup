@@ -77,7 +77,7 @@ db.users.remove({ name: 'Holly' });
  
 Xác thực sử dụng database
 
-<img src=http://i.imgur.com/XQFHtDr.png width="80%" height="80%" border="1">
+<img src=http://i.imgur.com/XQFHtDr.png width="100%" height="100%" border="1">
 
 ## Tham khảo
 
