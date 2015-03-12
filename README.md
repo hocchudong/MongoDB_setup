@@ -7,11 +7,10 @@
 [II. Cài đặt ](#Caidat)
 
 [III. Làm việc với MongDB](#lvMongo)
-<ul>
-<li>  [3.1 Chạy dịch vụ MongoDB](#chaydv)</li>
 
-<li>  [3.2 Kết nối đến MongoDB](#kn)</li>
-</ul>
+- [3.1 Chạy dịch vụ MongoDB](#chaydv)
+
+- [3.2 Kết nối đến MongoDB](#kn)
 
 [IV. Những lệnh phổ biến](#lenhphobien)
 
